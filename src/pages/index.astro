@@ -12,7 +12,7 @@ import "../styles/global.css";
 	</head>
 	<body>
 		<section class="text-white bg-black py-1">
-			<div class="container text-center relative">
+			<div class="container mx-auto text-center relative">
 				<p>Sign up and get 20% off to your first order. Sign Up Now</p>
 				<button type="button" class="absolute right-0 top-0">
 					<svg
@@ -29,17 +29,76 @@ import "../styles/global.css";
 			</div>
 		</section>
 
-		<nav>
-			<div class="container flex items-center justify-below">
+		<nav class="py-3">
+			<div class="container mx-auto flex items-center gap-4">
 				<div class="flex items-center gap-4">
 					<img src="https://placehold.co/100x40" alt="logo" />
 					<ul class="flex items-center gap-4">
-						<li><a href="#">Home</a></li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Contact</a></li>
+						<li><a href="">Shop</a></li>
+						<li><a href="">On Sale</a></li>
+						<li><a href="">New Arrivals</a></li>
+						<li><a href="">Brands</a></li>
 					</ul>
+				</div>
+				<div class="flex-1">
+					<input
+						type="search"
+						placeholder="Search for products..."
+						class="bg-gray-300 w-full rounded-full py-2 px-4"
+					/>
+				</div>
+				<div>
+					<a href="" class="flex items-center gap-2">Account</a>
 				</div>
 			</div>
 		</nav>
+
+		<header class="bg-neutral-100">
+			<div class="container mx-auto">
+				<div class="flex flex-col md:flex-row gap-4 pt-12">
+					<section class="self-center">
+						<section>
+							<h1 class="text-4xl md:text-5xl font-bold">
+								FIND CLOTHES THAT MATCHES YOUR STYLE
+							</h1>
+							<p class="mt-5 text-gray-500">
+								Browse through our diverse range of meticulously
+								crafted garments, designed to bring out your
+								individuality and cater to your sense of style.
+							</p>
+							<div class="mt-3">
+								<a
+									href="#"
+									class="w-full md:w-auto text-center bg-black hover:bg-zinc-700
+                transition text-white py-3 px-16 mt-5 inline-block rounded-full"
+									>Shop Now</a
+								>
+							</div>
+						</section>
+						<section class="mt-10">
+							<ul class="grid grid-cols-2 sm:grid-cols-3">
+								<li class="stats-item border-r-2">
+									<strong>200+</strong>
+									<small>International Brands</small>
+								</li>
+								<li class="stats-item">
+									<strong>2,000+</strong>
+									<small>High-Quality Products</small>
+								</li>
+								<li
+									class="stats-item sm:border-l-2 col-span-2 sm:col-span-1 items-center mt-4 sm:mt-0"
+								>
+									<strong>30,000+</strong>
+									<small>Happy Customers</small>
+								</li>
+							</ul>
+						</section>
+					</section>
+					<section class="self-end">
+						<img src="https://placehold.co/800x800" alt="" />
+					</section>
+				</div>
+			</div>
+		</header>
 	</body>
 </html>
