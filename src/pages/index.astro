@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import ProductItem from "../components/ProductItem.astro";
 ---
 
 <html lang="en">
@@ -100,6 +101,27 @@ import "../styles/global.css";
 				</div>
 			</div>
 		</header>
-		
+
+		<section class="py-6 bg-black">
+			<div class="container mx-auto">
+				<div class="flex gap-4 justify-center">
+					<img src="https://placehold.co/150x50" alt="" />
+					<img src="https://placehold.co/150x50" alt="" />
+					<img src="https://placehold.co/150x50" alt="" />
+					<img src="https://placehold.co/150x50" alt="" />
+					<img src="https://placehold.co/150x50" alt="" />
+				</div>
+			</div>
+		</section>
+
+		<section class="py-12 mt-6">
+			<h2 class="text-5xl font-bold text-center">NEW ARRIVALS</h2>
+			<ul class="grid grid-cols-4 gap-4">
+				<ProductItem img="https://placehold.co/200x200" name="Product 1" price="99.99" star="4.8" /></ul>
+				<ProductItem img="https://placehold.co/200x200" name="Product 2" price="99.99" star="4.8" /></ul>
+				<ProductItem img="https://placehold.co/200x200" name="Product 3" price="99.99" star="4.8" /></ul>
+				<ProductItem img="https://placehold.co/200x200" name="Product 4" price="99.99" star="4.8" /></ul>
+			</ul>
+		</section>
 	</body>
 </html>
