@@ -11,3 +11,7 @@
 .stats-item strong {
     @apply text-4xl font-bold
 }
+
+.dress-style-item {
+    @apply bg-white h-52 block rounded-xl p-4 text-2xl font-bold bg-contain bg-no-repeat bg-right
+}
