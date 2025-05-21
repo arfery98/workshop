@@ -1,4 +1,10 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@plugin "daisyui" {
+    themes: false;
+}
 
 .stats-item {
     @apply flex flex-col gap-1 first:pr-0 px-4 last:pr-0
@@ -9,7 +15,7 @@
 }
 
 .stats-item strong {
-    @apply text-4xl font-bold
+    @apply text-2xl lg:text-4xl font-bold
 }
 
 .dress-style-item {

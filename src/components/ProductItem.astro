@@ -1,5 +1,5 @@
 ---
-const { img, name, price, star , sale } = Astro.props;
+const { img, name, price, star, sale } = Astro.props;
 ---
 
 <li>
@@ -42,16 +42,16 @@ const { img, name, price, star , sale } = Astro.props;
     <section class="mt-2">
         {
             sale ? (
-                <div class="flex items-center gap-3 text-xl">
-                    <p class="font-bold text-2xl">${sale.price}</p>
+                <div class="flex md:flex-row items-center gap-3 text-xl">
+                    <p class="font-bold text-xl">${sale.price}</p>
                     <p class="line-through text-gray-500">${price}</p>
-                    <p class="bg-red-200 text-red-600 inline-block rounded-full px-5 text-base">{(sale.percent)}%</p>
+                    <p class="hidden md:inline-block bg-red-100 text-red-600 font-bold-semibold rounded-full px-3 text-base">
+                        {sale.percent}%
+                    </p>
                 </div>
             ) : (
-                <p class="font-bold text-2xl">${price}</p>
+                <p class="font-bold text-xl">${price}</p>
             )
         }
     </section>
-
-    
 </li>

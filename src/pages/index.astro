@@ -38,27 +38,52 @@ import ProductItem from "../components/ProductItem.astro";
 		<nav class="py-3">
 			<div class="container mx-auto flex items-center gap-4">
 				<div class="flex items-center gap-4">
-					<button type="button" class="md:hidden">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							><path
-								fill="currentColor"
-								d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"
-							></path></svg
-						>
-					</button>
+					<div class="drawer md:hidden">
+						<input
+							id="my-drawer"
+							type="checkbox"
+							class="drawer-toggle"
+						/>
+						<div class="drawer-content">
+							<!-- Page content here -->
+							<label for="my-drawer" class="drawer-button"
+								><svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									><path
+										fill="currentColor"
+										d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"
+									></path></svg
+								></label
+							>
+						</div>
+						<div class="drawer-side">
+							<label
+								for="my-drawer"
+								aria-label="close sidebar"
+								class="drawer-overlay"></label>
+							<ul
+								class="menu bg-black bg-base-100 text-base-content text-white font-bold min-h-full w-50 p-4"
+							>
+								<li><a href="">Shop</a></li>
+								<li><a href="">On Sale</a></li>
+								<li><a href="">New Arrivals</a></li>
+								<li><a href="">Brands</a></li>
+							</ul>
+						</div>
+					</div>
+
 					<img src="https://placehold.co/100x40" alt="logo" />
-					<ul class="hidden md:flex items-center gap-4">
+					<ul class="hidden lg:flex items-center gap-4">
 						<li><a href="">Shop</a></li>
 						<li><a href="">On Sale</a></li>
 						<li><a href="">New Arrivals</a></li>
 						<li><a href="">Brands</a></li>
 					</ul>
 				</div>
-				<div class="hidden md:flex flex-1">
+				<div class="md:flex flex-1">
 					<input
 						type="search"
 						placeholder="Search for products..."
@@ -105,7 +130,7 @@ import ProductItem from "../components/ProductItem.astro";
 							</div>
 						</section>
 						<section class="mt-10">
-							<ul class="grid grid-cols-2 sm:grid-cols-3">
+							<ul class="grid grid-cols-2 md:grid-cols-3">
 								<li class="stats-item border-r-2">
 									<strong>200+</strong>
 									<small>International Brands</small>
@@ -115,7 +140,7 @@ import ProductItem from "../components/ProductItem.astro";
 									<small>High-Quality Products</small>
 								</li>
 								<li
-									class="stats-item sm:border-l-2 col-span-2 sm:col-span-1 items-center mt-4 sm:mt-0"
+									class="stats-item sm:border-l-2 col-span-2 sm:col-span-1 mt-4 sm:mt-0 items-center"
 								>
 									<strong>30,000+</strong>
 									<small>Happy Customers</small>
@@ -132,7 +157,7 @@ import ProductItem from "../components/ProductItem.astro";
 
 		<section class="py-6 bg-black">
 			<div class="container mx-auto">
-				<div class="flex gap-4 justify-center">
+				<div class="flex flex-wrap gap-4 justify-center">
 					<img src="https://placehold.co/150x50" alt="" />
 					<img src="https://placehold.co/150x50" alt="" />
 					<img src="https://placehold.co/150x50" alt="" />
@@ -143,9 +168,11 @@ import ProductItem from "../components/ProductItem.astro";
 		</section>
 
 		<section class="py-12 mt-6">
-			<h2 class="text-5xl font-bold text-center">NEW ARRIVALS</h2>
+			<h2 class="text-4xl sm:text-5xl font-bold text-center">
+				NEW ARRIVALS
+			</h2>
 			<div class="container mx-auto">
-				<ul class="grid grid-cols-4 gap-4 mt-14">
+				<ul class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-14">
 					<ProductItem
 						img="https://placehold.co/200x200"
 						name="Product 1"
@@ -184,12 +211,16 @@ import ProductItem from "../components/ProductItem.astro";
 
 		<section>
 			<div class="container mx-auto">
-				<div class="rounded-2xl bg-neutral-100 py-16 px-10">
-					<h2 class="text-4xl font-bold text-center mb-10">
+				<div
+					class="rounded-2xl bg-neutral-100 py-8 md:py-16 px-6 md:px-10"
+				>
+					<h2
+						class="text-3xl sm:text-4xl font-bold text-center mb-10"
+					>
 						BROWSE BY DRESS STYLE
 					</h2>
-					<ul class="grid grid-cols-8 gap-4">
-						<li class="col-span-3">
+					<ul class="grid grid-cols-1 md:grid-cols-8 gap-4">
+						<li class="md:col-span-3">
 							<a
 								href="#"
 								class="dress-style-item"
@@ -197,7 +228,7 @@ import ProductItem from "../components/ProductItem.astro";
 								>Casual</a
 							>
 						</li>
-						<li class="col-span-5">
+						<li class="md:col-span-5">
 							<a
 								href="#"
 								class="dress-style-item"
@@ -205,7 +236,7 @@ import ProductItem from "../components/ProductItem.astro";
 								>Formal</a
 							>
 						</li>
-						<li class="col-span-5">
+						<li class="md:col-span-5">
 							<a
 								href="#"
 								class="dress-style-item"
@@ -213,7 +244,7 @@ import ProductItem from "../components/ProductItem.astro";
 								>Party</a
 							>
 						</li>
-						<li class="col-span-3">
+						<li class="md:col-span-3">
 							<a
 								href="#"
 								class="dress-style-item"
@@ -229,7 +260,7 @@ import ProductItem from "../components/ProductItem.astro";
 		<section class="pt-12">
 			<div class="container mx-auto">
 				<h2 class="text-4xl font-bold">CUSTOMERS</h2>
-				<ul class="mt-10 grid grid-cols-3 gap-4">
+				<ul class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
 					<li
 						class="border border-gray-400 rounded-2xl py-6 px-8 space-y-2"
 					>
@@ -357,12 +388,16 @@ import ProductItem from "../components/ProductItem.astro";
 			</div>
 		</section>
 
-		<section class="translate-y-1/2">
-			<div class="container mx-auto">
+		<section class="relative mt-44 sm:mt-36">
+			<div
+				class="top-0 absolute left-1/2 -translate-x-1/2 -translate-y-1/2 container"
+			>
 				<div
-					class="flex justify-between items-center bg-black py-8 px-10 rounded-2xl"
+					class="flex flex-col md:flex-row justify-between items-center bg-black py-8 px-6 md:px-16 rounded-2xl gap-4"
 				>
-					<h2 class="text-4xl font-bold text-white">
+					<h2
+						class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white"
+					>
 						STAY UPTO DATE ABOUT <br />OUR LATEST OFFERS
 					</h2>
 					<form class="max-w-sm">
@@ -372,7 +407,7 @@ import ProductItem from "../components/ProductItem.astro";
 							placeholder="Enter your email address"
 						/>
 						<button
-							class="bg-white hover:bg-zinc-300 transition rounded-full px-5 py-3 mt-4 inline-block cursor-pointer w-full text-black"
+							class="bg-white hover:bg-zinc-300 transition rounded-full py-3 mt-3 inline-block cursor-pointer w-full text-black"
 							>Subscribe to Newsletter</button
 						>
 					</form>
@@ -380,17 +415,19 @@ import ProductItem from "../components/ProductItem.astro";
 			</div>
 		</section>
 
-		<footer class="bg-neutral-100 pt-16">
+		<footer class="bg-neutral-100 pt-26 md:pt-20">
 			<div class="container mx-auto">
-				<section class="flex justify-between items-center pt-12 pb-6">
-					<div class="flex items-center gap-3">
+				<section
+					class="flex flex-col md:flex-row justify-between items-center pt-12 pb-6 gap-2"
+				>
+					<div class="flex flex-col md:flex-row items-center gap-3">
 						<img
 							src="https://placehold.co/150x60"
 							class=""
 							alt="logo"
 						/>
 						<h3 class="font-bold text-2xl"></h3>
-						<ul class="flex items-center gap-4">
+						<ul class="flex flex-wrap items-center gap-4">
 							<li><a href="">Shop</a></li>
 							<li><a href="">On Sale</a></li>
 							<li><a href="">New Arrivals</a></li>
